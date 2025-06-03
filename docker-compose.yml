@@ -1,0 +1,10 @@
+version: "3"
+services:
+  webhook:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./webhook.py:/app/webhook.py
